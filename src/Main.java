@@ -4,8 +4,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print(" введите количество строк (нечетное, >= 5): ");
         int rows = scanner.nextInt();
-        System.out.print(" введите количество столбцов (нечетное, >= 5): ");
+        System.out.print(" Введите количество столбцов (нечетное, >= 5): ");
         int cols = scanner.nextInt();
+
+
+
         Maze maze = new Maze(rows, cols);
         maze.generateMaze();
         System.out.println("Cгенерированный лабиринт:");
