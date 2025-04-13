@@ -8,7 +8,7 @@ public class Main {
         int cols = scanner.nextInt();
         Maze maze = new Maze(rows, cols);
         maze.generateMaze();
-        System.out.println("сгенерированный лабиринт:");
+        System.out.println("Cгенерированный лабиринт:");
         maze.printMaze();
         MazeSolver solver = new MazeSolver(maze);
         if (solver.solve()) {
