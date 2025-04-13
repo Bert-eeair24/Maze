@@ -18,7 +18,7 @@ public class Main {
             System.out.println("Путь найден:");
             maze.printMaze();
         } else {
-            System.out.println("Путь не найден.");
+            System.out.println("Путь не Найден.");
         }
         scanner.close();
     }
