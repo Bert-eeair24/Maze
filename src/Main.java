@@ -15,7 +15,7 @@ public class Main {
         maze.printMaze();
         MazeSolver solver = new MazeSolver(maze);
         if (solver.solve()) {
-            System.out.println("Путь найден:");
+            System.out.println("Путь Найден:");
             maze.printMaze();
         } else {
             System.out.println("Путь не Найден.");
