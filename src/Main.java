@@ -11,7 +11,7 @@ public class Main {
 
         Maze maze = new Maze(rows, cols);
         maze.generateMaze();
-        System.out.println("Cгенерированный лабиринт:");
+        System.out.println("Cгенерированный Лабиринт:");
         maze.printMaze();
         MazeSolver solver = new MazeSolver(maze);
         if (solver.solve()) {
