@@ -22,21 +22,5 @@ public class Maze {
             for (int j = 0; j < cols; j++)
                 grid[i][j] = WALL;
     }
-    public void generateMaze() {
-        dfsGenerate(1, 1);
-        grid[1][1] = PATH; // старт
-        grid[rows - 2][cols - 2] = PATH;
+
     }
-    private void dfsGenerate(int x, int y) {
-        grid[x][y] = PATH;
-        int[] dx = {0, 0, -2, 2};
-        int[] dy = {-2, 2, 0, 0};
-        int[] order = {0, 1, 2, 3};
-        for (int i = 0; i < order.length; i++) {
-            int j = random.nextInt(order.length);
-            int temp = order[i];
-            order[i] = order[j];
-            order[j] = temp;
-        }
-    }
-}
