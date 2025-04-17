@@ -22,11 +22,13 @@ public class Maze {
             for (int j = 0; j < cols; j++)
                 grid[i][j] = WALL;
     }
+
     public void generateMaze() {
         dfsGenerate(1, 1);
         grid[1][1] = PATH; // старт
         grid[rows - 2][cols - 2] = PATH;
     }
+
     private void dfsGenerate(int x, int y) {
         grid[x][y] = PATH;
         int[] dx = {0, 0, -2, 2};
@@ -47,19 +49,24 @@ public class Maze {
             }
         }
     }
+
     private boolean isInBounds(int x, int y) {
         return x > 0 && y > 0 && x < rows - 1 && y < cols - 1;
     }
 
+    public char[][] getGrid() {
+        return grid;
+    }
 
     public void printMaze() {
-            for (char[] row : grid) {
-                for (char c : row) {
-                    System.out.print(c);
-                }
-                System.out.println();
+        for (char[] row : grid) {
+            for (char c : row) {
+                System.out.print(c);
             }
+            System.out.println();
         }
-
     }
+}
+
+
 
