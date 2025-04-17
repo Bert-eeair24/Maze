@@ -6,13 +6,18 @@ public class Main {
         int rows = scanner.nextInt();
         System.out.print(" Введите количество столбцов (нечетное, >= 5): ");
         int cols = scanner.nextInt();
+
         Maze maze = new Maze(rows, cols);
         maze.generateMaze();
         System.out.println("Cгенерированный Лабиринт:");
         maze.printMaze();
-
-
-
-
+        MazeSolver solver = new MazeSolver(maze);
+        if (solver.solve()) {
+            System.out.println("Путь Найден:");
+            maze.printMaze();
+        } else {
+            System.out.println("Путь не Найден.");
+        }
+        scanner.close();
     }
 }
