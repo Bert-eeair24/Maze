@@ -37,6 +37,7 @@ public class Maze {
             int temp = order[i];
             order[i] = order[j];
             order[j] = temp;
+
         }
     }
 }
