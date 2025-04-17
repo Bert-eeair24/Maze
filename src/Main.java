@@ -8,18 +8,5 @@ public class Main {
         int cols = scanner.nextInt();
 
 
-
-        Maze maze = new Maze(rows, cols);
-        maze.generateMaze();
-        System.out.println("Cгенерированный Лабиринт:");
-        maze.printMaze();
-        MazeSolver solver = new MazeSolver(maze);
-        if (solver.solve()) {
-            System.out.println("Путь Найден:");
-            maze.printMaze();
-        } else {
-            System.out.println("Путь не Найден.");
-        }
-        scanner.close();
     }
 }
