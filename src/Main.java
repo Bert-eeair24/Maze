@@ -6,7 +6,5 @@ public class Main {
         int rows = scanner.nextInt();
         System.out.print(" Введите количество столбцов (нечетное, >= 5): ");
         int cols = scanner.nextInt();
-
-
     }
 }
