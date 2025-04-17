@@ -38,8 +38,21 @@ public class Maze {
             order[i] = order[j];
             order[j] = temp;
         }
+        for (int i : order) {
+            int nx = x + dx[i];
+            int ny = y + dy[i];
+            if (isInBounds(nx, ny) && grid[nx][ny] == WALL) {
+                grid[x + dx[i] / 2][y + dy[i] / 2] = PATH;
+                dfsGenerate(nx, ny);
+            }
+        }
     }
-        public void printMaze() {
+    private boolean isInBounds(int x, int y) {
+        return x > 0 && y > 0 && x < rows - 1 && y < cols - 1;
+    }
+
+
+    public void printMaze() {
             for (char[] row : grid) {
                 for (char c : row) {
                     System.out.print(c);
