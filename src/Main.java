@@ -6,6 +6,10 @@ public class Main {
         int rows = scanner.nextInt();
         System.out.print(" Введите количество столбцов (нечетное, >= 5): ");
         int cols = scanner.nextInt();
+        Maze maze = new Maze(rows, cols);
+        maze.generateMaze();
+        System.out.println("Cгенерированный Лабиринт:");
+        maze.printMaze();
 
 
 
