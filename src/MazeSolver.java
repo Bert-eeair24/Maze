@@ -1,21 +1,17 @@
-
 public class MazeSolver {
     private final Maze maze;
     private final char[][] grid;
     private final int rows;
     private final int cols;
-
     public MazeSolver(Maze maze) {
         this.maze = maze;
         this.grid = maze.getGrid();
         this.rows = grid.length;
         this.cols = grid[0].length;
     }
-
     public boolean solve() {
         return dfs(1, 1);
     }
-
     private boolean dfs(int x, int y) {
         if (!isInBounds(x, y) || grid[x][y] != Maze.PATH) {
             return false;
@@ -37,9 +33,7 @@ public class MazeSolver {
         grid[x][y] = Maze.PATH;
         return false;
     }
-
     private boolean isInBounds(int x, int y) {
         return x >= 0 && y >= 0 && x < rows && y < cols;
-
     }
 }
